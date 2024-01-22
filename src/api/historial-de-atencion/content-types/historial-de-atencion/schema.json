@@ -1,0 +1,73 @@
+{
+  "kind": "collectionType",
+  "collectionName": "historial_de_atencions",
+  "info": {
+    "singularName": "historial-de-atencion",
+    "pluralName": "historial-de-atencions",
+    "displayName": "Historial de atencion"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "n_ficha": {
+      "type": "integer"
+    },
+    "tipo_de_consulta": {
+      "type": "string"
+    },
+    "fecha_de_consulta": {
+      "type": "datetime"
+    },
+    "servicio": {
+      "type": "string"
+    },
+    "turno": {
+      "type": "integer"
+    },
+    "tipo_paciente": {
+      "type": "string"
+    },
+    "medico": {
+      "type": "string"
+    },
+    "tipo_1": {
+      "type": "enumeration",
+      "enum": [
+        "CANCELADO",
+        "RECONSULTA",
+        "REFERIDO"
+      ]
+    },
+    "tipo_2": {
+      "type": "enumeration",
+      "enum": [
+        "T_SOCIAL",
+        "INTERC",
+        "DISCAP"
+      ]
+    },
+    "peso": {
+      "type": "decimal"
+    },
+    "talla": {
+      "type": "integer"
+    },
+    "temperatura": {
+      "type": "decimal"
+    },
+    "paciente": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::paciente.paciente",
+      "inversedBy": "historial_de_atencions"
+    },
+    "historial_clinico": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::historial-clinico.historial-clinico",
+      "inversedBy": "historial_de_atencions"
+    }
+  }
+}

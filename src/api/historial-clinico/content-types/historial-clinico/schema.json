@@ -1,0 +1,120 @@
+{
+  "kind": "collectionType",
+  "collectionName": "historial_clinicos",
+  "info": {
+    "singularName": "historial-clinico",
+    "pluralName": "historial-clinicos",
+    "displayName": "Historial clinico",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ingreso": {
+      "type": "component",
+      "repeatable": true,
+      "component": "historial-clinico.ingreso"
+    },
+    "diagnostico_principal": {
+      "type": "component",
+      "repeatable": true,
+      "component": "historial-clinico.diagnostico-principal"
+    },
+    "otros_diagnosticos": {
+      "type": "component",
+      "repeatable": true,
+      "component": "historial-clinico.otros-diagnosticos"
+    },
+    "operaciones": {
+      "type": "component",
+      "repeatable": true,
+      "component": "historial-clinico.operaciones"
+    },
+    "causa_del_egreso": {
+      "type": "enumeration",
+      "enum": [
+        "HOSPITALARIA",
+        "TRANSFERENCIA",
+        "SOLICITADA",
+        "FUGA",
+        "FALLECIDO"
+      ]
+    },
+    "condicion_al_egreso": {
+      "type": "enumeration",
+      "enum": [
+        "CURADO",
+        "MEJORADO",
+        "MISMO ESTADO",
+        "INCURABLE",
+        "NO TRATADO"
+      ]
+    },
+    "grado_de_instruccion": {
+      "type": "enumeration",
+      "enum": [
+        "A",
+        "P",
+        "S",
+        "T",
+        "NINGUNO"
+      ]
+    },
+    "referencia": {
+      "type": "enumeration",
+      "enum": [
+        "SI",
+        "NO"
+      ]
+    },
+    "enviado_de": {
+      "type": "string"
+    },
+    "seguro": {
+      "type": "enumeration",
+      "enum": [
+        "P",
+        "SEG",
+        "ESP"
+      ]
+    },
+    "diagnostico_de_ingreso": {
+      "type": "string"
+    },
+    "medico_que_ordeno_la_internacion": {
+      "type": "component",
+      "repeatable": false,
+      "component": "historial-clinico.medico-que-ordeno-la-internacion"
+    },
+    "autopsia": {
+      "type": "enumeration",
+      "enum": [
+        "SI",
+        "NO"
+      ]
+    },
+    "n_protocolo": {
+      "type": "string"
+    },
+    "fecha": {
+      "type": "date"
+    },
+    "dias_de_estadia": {
+      "type": "integer"
+    },
+    "paciente": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::paciente.paciente",
+      "inversedBy": "historial_clinico"
+    },
+    "historial_de_atencions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::historial-de-atencion.historial-de-atencion",
+      "mappedBy": "historial_clinico"
+    }
+  }
+}

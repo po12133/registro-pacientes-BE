@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_historial_clinico_medico_que_ordeno_la_internacions",
+  "info": {
+    "displayName": "Medico que ordeno la internacion"
+  },
+  "options": {},
+  "attributes": {
+    "dr": {
+      "type": "string"
+    },
+    "matricula": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_historial_clinico_otros_diagnosticos",
+  "info": {
+    "displayName": "Otros diagnosticos"
+  },
+  "options": {},
+  "attributes": {
+    "descripcion": {
+      "type": "string"
+    },
+    "codigo": {
+      "type": "string"
+    }
+  }
+}

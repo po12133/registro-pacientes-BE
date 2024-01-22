@@ -1,0 +1,70 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pacientes",
+  "info": {
+    "singularName": "paciente",
+    "pluralName": "pacientes",
+    "displayName": "Pacientes",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombres": {
+      "type": "string"
+    },
+    "ap_paterno": {
+      "type": "string"
+    },
+    "ap_materno": {
+      "type": "string"
+    },
+    "doc_identidad": {
+      "type": "string"
+    },
+    "genero": {
+      "type": "string"
+    },
+    "fec_nac_d_m_a": {
+      "type": "date"
+    },
+    "edad": {
+      "type": "integer"
+    },
+    "lugar_nac": {
+      "type": "string"
+    },
+    "ciudad": {
+      "type": "string"
+    },
+    "provincia": {
+      "type": "string"
+    },
+    "direccion": {
+      "type": "string"
+    },
+    "zona": {
+      "type": "string"
+    },
+    "telf_1": {
+      "type": "string"
+    },
+    "telf_2": {
+      "type": "string"
+    },
+    "historial_de_atencions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::historial-de-atencion.historial-de-atencion",
+      "mappedBy": "paciente"
+    },
+    "historial_clinico": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::historial-clinico.historial-clinico",
+      "mappedBy": "paciente"
+    }
+  }
+}

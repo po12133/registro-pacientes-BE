@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_historial_clinico_ingresos",
+  "info": {
+    "displayName": "ingreso",
+    "icon": "calendar"
+  },
+  "options": {},
+  "attributes": {
+    "fecha": {
+      "type": "date"
+    },
+    "hora": {
+      "type": "time"
+    },
+    "servicio": {
+      "type": "string"
+    },
+    "sala": {
+      "type": "string"
+    },
+    "cama": {
+      "type": "string"
+    }
+  }
+}

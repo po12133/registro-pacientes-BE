@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_historial_clinico_diagnostico_principals",
+  "info": {
+    "displayName": "Diagnostico principal"
+  },
+  "options": {},
+  "attributes": {
+    "descripcion": {
+      "type": "string"
+    },
+    "codigo": {
+      "type": "string"
+    }
+  }
+}
